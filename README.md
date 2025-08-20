@@ -87,6 +87,28 @@ The `results/` folder contains:
 - Visualizations and summary statistics as reported in the paper.
 
 
+## Docker Setup
+
+If you want to run the experiments on a standalone image using Docker, follow these steps:
+
+1. **Install Docker:**
+   Download and install Docker for your platform from the official website: https://www.docker.com/products/docker-desktop. Follow the instructions for your operating system.
+
+2. **Build the Docker Image:**
+   From the project root, build the Docker image using the `Dockerfile` provided, as follows:
+   ```bash
+   docker build -t llm4ci-project .
+   ```
+
+3. **Run the Docker Image:**
+   Now you can run the Docker image and provide your OpenAI API key, as follows:
+   ```bash
+   docker run -it --rm -e OPENAI_API_KEY=your_api_key_here llm4ci-project
+   ```
+
+4. **Execute the steps in the _Usage_ section above:**
+
+
 ## License
 
 Code in this repository is licensed under the MIT License. See the LICENSE file.
